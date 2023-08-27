@@ -1,4 +1,4 @@
-# ProgGame
+# Programming Game
 A small game that allows to set and practice programming tasks.
 
 Build with:
@@ -6,6 +6,7 @@ Build with:
 * React.js
 * Mantine
 * Monaco-Editor/React
+* Tabler-Icons-React
 
 ## How to develop
 
