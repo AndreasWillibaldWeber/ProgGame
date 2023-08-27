@@ -24,5 +24,6 @@ yarn-error.log*
 neutralino.js
 code.py
 
+.tmp
 .storage
 *.log
