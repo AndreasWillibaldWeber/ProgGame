@@ -19,6 +19,7 @@ neu run --frontend-lib-dev
 ```
 
 ## Roadmap
+* [X] Create a GitHub actions workflow for automatic builds.
 * [X] Create UI for programming and for program output.
 * [X] Connect UI with Python interpreter.
   * Program execution button works.
