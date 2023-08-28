@@ -5,14 +5,24 @@ A small game that allows to set and practice programming tasks.
 
 ![ProgGame on Linux](media/Screenshot_Full_Screen_Dark.png)
 
-Build with:
-* neutralino.js
+**Build with**:
+* neutralino*.js
 * React.js
 * Mantine
 * Monaco-Editor/React
 * Tabler-Icons-React
 
+## Prerequisites
+
+* **Usage:**
+  * python (3.x)
+* **Development:**
+  * python (3.x)
+  * node.js (v18.16.1)
+  * npm (v9.8.1)
+
 ## How to setup
+
 ```
 sudo npm install -g @neutralinojs/neu
 neu create ProgApp --template AndreasWillibaldWeber/ProgGame
@@ -40,14 +50,15 @@ neu build --release
 * [X] Create a GitHub actions workflow for automatic builds.
 * [X] Create UI for programming and for program output.
 * [X] Connect UI with Python interpreter.
-  * Program execution button works.
-  * Editor and output clear button works.
+  * [X] Program execution button works.
+  * [X] Editor and output clear button works.
 * [ ] Implement Game Logic.
-  * The player is given 5 randomly selected programming tasks one after the other, which must be solved in a single attempt.
-  * Button to start a game round works.
-  * Button to reset a game works.
-  * Input field for player name works.
-  * Tasks, tests and template code can be defined by files.
+  * [ ] The player is given 5 randomly selected programming tasks one after the other, which must be solved in a single attempt.
+  * [ ] Create 5 tasks as examples
+  * [ ] Button to start a game round works.
+  * [ ] Button to reset a game works.
+  * [ ] Input field for player name works.
+  * [ ] Tasks, tests and template code can be defined by files.
 * [ ] A List of player names that have completely solved a round can be displayed
 
 ## License
