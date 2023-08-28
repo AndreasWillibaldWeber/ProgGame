@@ -1,0 +1,38 @@
+name: build
+
+on:
+  push:
+    paths:
+      - main/**
+jobs:
+  build:
+    name: build specification 
+    runs-on:  ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - name: set up git repository
+        uses: actions/checkout@v3
+
+      - name: set up enviroment
+        run: |
+          sudo npm install -g @neutralinojs/neu
+
+      - name: install depencies
+        run: |
+          cd react-src && npm install && cd ..
+
+      - name: build react
+        run: |
+          cd react-src && npm run build && cd ..
+
+      - name: build neutralino
+        run: |
+          neu build --release
+
+      - name: upload binaries to artifactory
+        uses: actions/upload-artifact@v3
+        with:
+          name: ProgGame
+          path: ./dist/ProgGame-release.zip
