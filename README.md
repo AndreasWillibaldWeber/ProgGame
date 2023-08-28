@@ -1,3 +1,5 @@
+[![spec](https://github.com/AndreasWillibaldWeber/ProgGame/actions/workflows/main.yml/badge.svg)](https://github.com/AndreasWillibaldWeber/ProgGame/actions/workflows/main.yml)
+
 # Programming Game
 A small game that allows to set and practice programming tasks.
 
