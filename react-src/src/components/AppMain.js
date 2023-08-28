@@ -13,7 +13,7 @@ export default function AppMain({out, initVal, setCode, theme}) {
             console.log(editorRef)
         }
         setCode("")
-    }, [initVal]);
+    }, [initVal]); // eslint-disable-line
 
     const getCode = (value) => {
         setCode(value);

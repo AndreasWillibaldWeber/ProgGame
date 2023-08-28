@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Stepper, rem } from '@mantine/core';
 
 export default function ProgressStepper() {
-    const [active, setActive] = useState(0);
+   
+    const [active, setActive] = useState(0); // eslint-disable-line
 
     return (
         <Stepper active={active} breakpoint="sm" iconPosition="right" styles={{
