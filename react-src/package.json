@@ -11,7 +11,7 @@
     "@mantine/notifications": "^6.0.19",
     "@mantine/prism": "^6.0.19",
     "@monaco-editor/react": "^4.5.2",
-    "@neutralinojs/lib": "^3.8.2",
+    "@neutralinojs/lib": "^3.11",
     "@tabler/icons-react": "^2.32.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
