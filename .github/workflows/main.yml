@@ -24,7 +24,7 @@ jobs:
 
       - name: set up neutralino
         run: |
-          sudo npm install -g @neutralinojs/neu
+          sudo npm install -g @neutralinojs/neu && neu create app && mv app/bin bin && rm -rf app
 
       - name: install dependencies
         run: |
@@ -36,10 +36,10 @@ jobs:
 
       - name: build neutralino
         run: |
-          neu build --release
+          ls && neu build --release && ls dist/ProgGame
 
       - name: upload binaries to artifactory
         uses: actions/upload-artifact@v3
         with:
           name: ProgGame
-          path: ./dist/ProgGame-release.zip
+          path: ./dist/ProgGame
