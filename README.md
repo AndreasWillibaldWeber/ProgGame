@@ -3,6 +3,8 @@
 # Programming Game
 A small game that allows to set and practice programming tasks.
 
+![ProgGame on Linux](media/Screenshot_Full_Screen_Dark.png)
+
 Build with:
 * neutralino.js
 * React.js
