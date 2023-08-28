@@ -10,17 +10,31 @@ Build with:
 * Monaco-Editor/React
 * Tabler-Icons-React
 
-## How to develop
-
+## How to setup
 ```
-cd myapp-react
+sudo npm install -g @neutralinojs/neu
+neu create ProgApp --template AndreasWillibaldWeber/ProgGame
+```
+
+## How to develop
+```
+cd react-src
 npm i
 npm start
 cd ..
 neu run --frontend-lib-dev
 ```
 
-## Roadmap
+## How to build
+```
+cd react-src
+npm i
+npm run build
+cd ..
+neu build --release
+```
+
+## Roadmap to v1.0.0
 * [X] Create a GitHub actions workflow for automatic builds.
 * [X] Create UI for programming and for program output.
 * [X] Connect UI with Python interpreter.
