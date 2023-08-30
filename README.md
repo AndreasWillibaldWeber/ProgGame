@@ -6,7 +6,7 @@ A small game that allows to set and practice programming tasks.
 ![ProgGame on Linux](media/Screenshot_Full_Screen_Dark.png)
 
 **Build with**:
-* neutralino*.js
+* neutralino.js
 * React.js
 * Mantine
 * Monaco-Editor/React
@@ -53,11 +53,12 @@ neu build --release
   * [X] Program execution button works.
   * [X] Editor and output clear button works.
 * [ ] Implement Game Logic.
-  * [ ] The player is given 5 randomly selected programming tasks one after the other, which must be solved in a single attempt.
+  * [X] The player is given 5 randomly selected programming tasks one after the other, which must be solved in a single attempt.
   * [ ] Create 5 tasks as examples
-  * [ ] Button to start a game round works.
-  * [ ] Button to reset a game works.
-  * [ ] Input field for player name works.
+  * [X] Button to start a game round works.
+  * [X] Button to reset a game works.
+  * [X] Input field for player name works.
+  * [ ] Load tasks into the editor and check for correctness after execution.
   * [ ] Tasks, tests and template code can be defined by files.
 * [ ] A List of player names that have completely solved a round can be displayed
 
