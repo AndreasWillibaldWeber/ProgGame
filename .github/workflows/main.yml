@@ -45,4 +45,6 @@ jobs:
           path: |
             ./dist/ProgGame
             ./manuals/User_Manual-Programming_Game.pdf
+            ./README.md
+            ./LICENSE
           if-no-files-found: error
