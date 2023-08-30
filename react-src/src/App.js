@@ -2,11 +2,12 @@ import { React, useState } from 'react'
 import { useColorScheme } from '@mantine/hooks';
 import './App.css';
 
-import { ColorSchemeProvider, MantineProvider, AppShell, Button, Overlay } from '@mantine/core';
+import { ColorSchemeProvider, MantineProvider, AppShell } from '@mantine/core';
 
 import AppHeader from './components/AppHeader';
 import AppMain from './components/AppMain';
 import AppFooter from './components/AppFooter';
+import AppOverlay from './components/AppOverlay';
 
 import { loadTasks } from './utils/LoadTasks';
 import { pyExecutor } from './utils/PyExecutor';
@@ -59,16 +60,10 @@ function App() {
                           setCode={setCode}
                           theme={colorScheme}/>}
               </AppShell>
-              { (state === -1 || state === 5) && (
-                <Overlay blur={15}
-                        center>
-                  <Button color={state === 5 ? 'green.5' : 'red.5'}
-                        radius="xl" 
-                        onClick={() => state === 5 ? (setState(-2), setName("")) : setState(0)}>
-                    {state === 5 ? 'Congratulations! ' + name + ' has solved five random tasks in a row!' : 'Challenge! ' + name + ' wants to solve five random tasks in a row!'}
-                  </Button>
-                </Overlay>
-              )}
+              <AppOverlay state={state}
+                          setState={setState}
+                          name={name}
+                          setName={setName}/>
             </MantineProvider>
           </ColorSchemeProvider>);
 }
