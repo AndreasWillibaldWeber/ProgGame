@@ -8,6 +8,7 @@ import AppHeader from './components/AppHeader';
 import AppMain from './components/AppMain';
 import AppFooter from './components/AppFooter';
 
+import { loadTasks } from './utils/LoadTasks';
 import { pyExecutor } from './utils/PyExecutor';
 
 function App() {
@@ -17,12 +18,19 @@ function App() {
   const [initVal, setInitVal] = useState(0);
   const [code, setCode] = useState('');
   const [out, setOut] = useState('');
+  const [tasks, setTasks] = useState([]);
 
   const preferredColorScheme = useColorScheme();
   const [colorScheme, setColorScheme] = useState(preferredColorScheme);
 
   const toggleColorScheme = (value) => {
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
+  }
+
+  if (tasks.length === 0) {
+    loadTasks().then(t => {
+      setTasks(t)
+    });
   }
 
   return (<ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
