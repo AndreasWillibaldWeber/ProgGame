@@ -5,7 +5,10 @@ A small game that allows to set and practice programming tasks.
 
 ![ProgGame on Linux](media/Screenshot_Full_Screen_Dark.png)
 
-**Build with**:
+## Manuals
+* [User Manual](manuals/User_Manual-Programming_Game.pdf)
+
+## Build Tools:
 * neutralino.js
 * React.js
 * Mantine
