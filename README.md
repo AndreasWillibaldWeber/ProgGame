@@ -19,6 +19,7 @@ A small game that allows to set and practice programming tasks.
 
 * **Usage:**
   * python (3.x)
+  * Linux user still needs to grant execution rights by using the command ```chmod +x filename``` before launching the application.
 * **Development:**
   * python (3.x)
   * node.js (v18.16.1)
