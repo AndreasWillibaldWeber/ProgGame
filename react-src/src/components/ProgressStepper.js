@@ -1,12 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Stepper, rem } from '@mantine/core';
 
-export default function ProgressStepper() {
+export default function ProgressStepper({state}) {
    
-    const [active, setActive] = useState(0); // eslint-disable-line
+    const [active, setActive] = useState(0);
+
+    useEffect(() => {
+      if (!state) {
+        state = 0;
+      }
+      setActive(state);
+    }, [state]); // eslint-disable-line
 
     return (
-        <Stepper active={active} breakpoint="sm" iconPosition="right" styles={{
+        <Stepper color="gray.7" active={active} breakpoint="sm" iconPosition="right" styles={{
             stepBody: {
               display: 'none',
             },
@@ -25,11 +32,11 @@ export default function ProgressStepper() {
               height: rem(10),
             },
           }}>
-        <Stepper.Step/>
-        <Stepper.Step/>
-        <Stepper.Step/>
-        <Stepper.Step/>
-        <Stepper.Step/>
+        <Stepper.Step color="red.5"/>
+        <Stepper.Step color="orange.5"/>
+        <Stepper.Step color="yellow.5"/>
+        <Stepper.Step color="lime.5"/>
+        <Stepper.Step color="green.5"/>
         </Stepper>
     );
 }

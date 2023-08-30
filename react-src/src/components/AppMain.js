@@ -3,7 +3,7 @@ import { Container, Space, Grid, Code, ScrollArea, Loader } from '@mantine/core'
 import Editor from '@monaco-editor/react';
 import ProgressStepper from './ProgressStepper';
 
-export default function AppMain({out, initVal, setCode, theme}) {
+export default function AppMain({state, out, initVal, setCode, theme}) {
 
     const editorRef = useRef(null);
 
@@ -21,7 +21,7 @@ export default function AppMain({out, initVal, setCode, theme}) {
 
     return (<>
         <Container>
-            <ProgressStepper/>
+            <ProgressStepper state={state}/>
         </Container>
         <Space h="sm"/>
         <Grid>
