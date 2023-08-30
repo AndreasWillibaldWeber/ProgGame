@@ -42,4 +42,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ProgGame
-          path: ./dist/ProgGame
+          path: |
+            ./dist/ProgGame
+            ./manuals/User_Manual-Programming_Game.pdf
+          if-no-files-found: error
