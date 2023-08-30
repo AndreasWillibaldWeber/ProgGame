@@ -7,7 +7,8 @@ export default function ProgressStepper({state}) {
 
     useEffect(() => {
       if (!state) {
-        state = 0;
+        setActive(0);
+        return;
       }
       setActive(state);
     }, [state]); // eslint-disable-line
