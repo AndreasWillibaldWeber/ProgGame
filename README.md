@@ -24,27 +24,37 @@ A small game that allows to set and practice programming tasks.
   * python (3.x)
   * node.js (v18.16.1)
   * npm (v9.8.1)
+  * Run all builds at least once.
 
 ## How to setup
 
-```
+```bash
 sudo npm install -g @neutralinojs/neu
 neu create ProgApp --template AndreasWillibaldWeber/ProgGame
 ```
 
 ## How to develop
-```
+```bash
 cd react-src
-npm i
+npm i          # one-time execution of npm i is sufficient
 npm start
 cd ..
 neu run --frontend-lib-dev
 ```
 
-## How to build
-```
+## How to debug
+```bash
 cd react-src
-npm i
+npm i          # one-time execution of npm i is sufficient
+npm run build
+cd ..
+neu run -- --window-enable-inspetor
+```
+
+## How to build
+```bash
+cd react-src
+npm i          # one-time execution of npm i is sufficient
 npm run build
 cd ..
 neu build --release
