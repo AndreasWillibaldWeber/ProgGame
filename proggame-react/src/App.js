@@ -52,7 +52,9 @@ function App() {
                                     setState={setState}/>}
                   footer={<AppFooter state={state}
                                     setState={setState}
+                                    ready={ready}
                                     code={code}
+                                    setCode={setCode}
                                     initVal={initVal}
                                     setInitVal={setInitVal} 
                                     setOut={setOut} 
@@ -65,6 +67,9 @@ function App() {
               </AppShell>
               <AppOverlay state={state}
                           setState={setState}
+                          setOut={setOut}
+                          initVal={initVal}
+                          setInitVal={setInitVal}
                           name={name}
                           setName={setName}/>
             </MantineProvider>
