@@ -48,7 +48,7 @@ cd react-src
 npm i          # one-time execution of npm i is sufficient
 npm run build
 cd ..
-neu run -- --window-enable-inspetor
+neu run -- --window-enable-inspector
 ```
 
 ## How to build
