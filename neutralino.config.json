@@ -2,7 +2,7 @@
   "applicationId": "ProgGame",
   "version": "1.0.0",
   "defaultMode": "window",
-  "documentRoot": "/react-src/build/",
+  "documentRoot": "/proggame-react/build/",
   "url": "/",
   "enableServer": true,
   "enableNativeAPI": true,
@@ -27,17 +27,17 @@
       "height": 1024,
       "minWidth": 1280,
       "minHeight": 1024,
-      "icon": "/react-src/public/logo192.png"
+      "icon": "/proggame-react/public/logo192.png"
     }
   },
   "cli": {
     "binaryName": "ProgGame",
     "extensionsPath": "/extensions/",
-    "resourcesPath": "/react-src/build/",
+    "resourcesPath": "/proggame-react/build/",
     "binaryVersion": "4.10.0",
     "clientVersion": "3.11.0",
     "frontendLibrary": {
-      "patchFile": "/react-src/public/index.html",
+      "patchFile": "/proggame-react/public/index.html",
       "devUrl": "http://localhost:3000"
     }
   }
