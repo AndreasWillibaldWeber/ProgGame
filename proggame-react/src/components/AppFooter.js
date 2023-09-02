@@ -1,7 +1,7 @@
 import { Text, SimpleGrid, Group, Button, Space, Footer } from '@mantine/core';
 import { PlayerPlay, Trash, Copyright } from 'tabler-icons-react';
 
-export default function AppFooter({state, setState, ready, code, setCode, initVal, setInitVal, setOut, executor}) {
+export default function AppFooter({state, setState, code, setCode, initVal, setInitVal, setOut, executor}) {
 
     const executeCode = async () => {
         const out = await executor(code)

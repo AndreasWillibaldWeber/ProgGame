@@ -52,7 +52,6 @@ function App() {
                                     setState={setState}/>}
                   footer={<AppFooter state={state}
                                     setState={setState}
-                                    ready={ready}
                                     code={code}
                                     setCode={setCode}
                                     initVal={initVal}
