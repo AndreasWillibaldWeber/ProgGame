@@ -20,6 +20,7 @@ function App() {
   const [code, setCode] = useState('');
   const [out, setOut] = useState('');
   const [tasks, setTasks] = useState([]);
+  const [ready, setReady] = useState(false);
 
   const preferredColorScheme = useColorScheme();
   const [colorScheme, setColorScheme] = useState(preferredColorScheme);
@@ -30,7 +31,8 @@ function App() {
 
   if (tasks.length === 0) {
     loadTasks().then(t => {
-      setTasks(t)
+      setTasks(t);
+      setReady(true);
     });
   }
 
@@ -45,6 +47,7 @@ function App() {
                   navbar={<></>}
                   header={<AppHeader name={name}
                                     setName={setName}
+                                    ready={ready}
                                     state={state}
                                     setState={setState}/>}
                   footer={<AppFooter state={state}

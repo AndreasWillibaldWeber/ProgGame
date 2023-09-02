@@ -1,12 +1,16 @@
-import { Header, Title, TextInput, SimpleGrid, Group, Button, Space } from '@mantine/core';
+import { Header, Title, TextInput, SimpleGrid, Group, Button, Space, Text} from '@mantine/core';
 import { FileCode, Run, Repeat } from 'tabler-icons-react';
 import SchemaToggle from './SchemaToggle';
 
-export default function AppHeader({state, setState, name, setName}) {
+export default function AppHeader({state, setState, ready, name, setName}) {
 
     const startState = () => {
         if (state === 5) {
             resetState();
+            return;
+        }
+        if (!ready) {
+            alert("No tasks loaded!");
             return;
         }
         setState(-1);
@@ -25,18 +29,23 @@ export default function AppHeader({state, setState, name, setName}) {
                     <Title>Programming Game</Title>
                 </Group>
                 <SchemaToggle/>
-                <Group position='right'>
-                    <TextInput disabled={state >= 0}
-                            value={name} onChange={(event) => setName(event.currentTarget.value)}
-                            placeholder='Insert Name'></TextInput>
-                    <Button disabled={state >= 0 || !name} 
-                            color="green"
-                            onClick={startState}><Run/></Button>
-                    <Button disabled={state < 0}
-                            color="orange" 
-                            onClick={resetState}><Repeat/></Button>
-                    <Space w="xs"/>
-                </Group>
+                {ready ?
+                    <Group position='right'>
+                        <TextInput disabled={!ready || state >= 0}
+                                value={name} onChange={(event) => setName(event.currentTarget.value)}
+                                placeholder='Insert Name'></TextInput>
+                        <Button disabled={state >= 0 || !name} 
+                                color="green"
+                                onClick={startState}><Run/></Button>
+                        <Button disabled={state < 0}
+                                color="orange" 
+                                onClick={resetState}><Repeat/></Button>
+                        <Space w="xs"/>
+                    </Group> :
+                    <Group position='right'>
+                        <Text color='red'>No tasks loaded!</Text>
+                        <Space w="xs"/>
+                    </Group>}
                 </SimpleGrid>
             </Header>);
 }
