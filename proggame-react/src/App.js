@@ -59,9 +59,11 @@ function App() {
                                     setInitVal={setInitVal} 
                                     setOut={setOut} 
                                     executor={pyExecutor}/>}>
-                {<AppMain state={state}
+                {<AppMain ready={ready}
+                          state={state}
                           out={out}
                           initVal={initVal}
+                          tasks={tasks}
                           setCode={setCode}
                           theme={colorScheme}/>}
               </AppShell>

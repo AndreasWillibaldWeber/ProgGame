@@ -3,7 +3,7 @@ import { Container, Space, Grid, Code, ScrollArea, Loader } from '@mantine/core'
 import Editor from '@monaco-editor/react';
 import ProgressStepper from './ProgressStepper';
 
-export default function AppMain({state, out, initVal, setCode, theme}) {
+export default function AppMain({ready, state, out, initVal, tasks, setCode, theme}) {
 
     const editorRef = useRef(null);
 
@@ -29,7 +29,7 @@ export default function AppMain({state, out, initVal, setCode, theme}) {
                 <Editor height="77vh"
                         width="100%"
                         defaultLanguage="python" 
-                        defaultValue=""
+                        defaultValue={ready && state >= 0 && state < 5 ? tasks[state].code : ""}
                         onChange={getCode}
                         loading={<Loader/>}
                         theme={theme === 'dark' ? 'vs-dark' : 'vs'}
