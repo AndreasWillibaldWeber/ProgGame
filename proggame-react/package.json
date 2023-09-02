@@ -2,6 +2,7 @@
   "name": "proggame-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@mantine/core": "^6.0.19",
