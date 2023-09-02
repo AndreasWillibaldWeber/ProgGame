@@ -1,22 +1,32 @@
 [{
     "id": 0,
     "name": "task 0",
-    "code": "def task_one():\n    return True\n\nprint(task_one())"
+    "desc": "\"\"\"\nTask: Create a function that adds two numbers!\n\"\"\"",
+    "code": "def add(a,b):\n    pass",
+    "test": "print((11 == add(5,6)) and (7 == add(4,3)))"
 },{
     "id": 1,
     "name": "task 1",
-    "code": "def task_two():\n    return True\n\nprint(task_two())"
+    "desc": "\"\"\"\nTask: Create a function that subtracts two numbers!\n\"\"\"",
+    "code": "def sub(a,b):\n    pass",
+    "test": "print((11 == sub(22,11)) and (7 == sub(11,4)))"
 },{
     "id": 2,
     "name": "task 2",
-    "code": "def task_three():\n    return True\n\nprint(task_three())"
+    "desc": "\"\"\"\nTask: Create a function that multiplies two numbers!\n\"\"\"",
+    "code": "def mul(a,b):\n    pass",
+    "test": "print((9 == mul(3,3)) and (21 == mul(7,3)))"
 },{
     "id": 3,
     "name": "task 3",
-    "code": "def task_four():\n   return True\n\nprint(task_four())"
+    "desc": "\"\"\"\nTask: Create a function that divides two numbers!\n\"\"\"",
+    "code": "def div(a,b):\n    pass",
+    "test": "print((11 == div(22,2)) and (7 == div(21,3)))"
 
 },{
     "id": 4,
     "name": "task 4",
-    "code": "def task_five():\n   return True\n\nprint(task_five())"
+    "desc": "\"\"\"\nTask: Create a function that calculates the integer remainder of a division!\n\"\"\"",
+    "code": "def mod(a,b):\n    pass",
+    "test": "print((1 == mod(3,2)) and (2 == mod(5,3)))"
 }]
