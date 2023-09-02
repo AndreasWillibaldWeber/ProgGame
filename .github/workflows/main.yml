@@ -38,13 +38,17 @@ jobs:
         run: |
           ls && neu build --release && ls dist/ProgGame
 
+      - name: finalize release
+        run: |
+          mv manuals/User_Manual-Programming_Game.pdf dist/ProgGame/User_Manual-Programming_Game.pdf
+          mv README.md dist/ProgGame/README.md
+          mv LICENSE dist/ProgGame/LICENSE
+          mv tasks.json dist/ProgGame/tasks.json
+
       - name: upload binaries to artifactory
         uses: actions/upload-artifact@v3
         with:
           name: ProgGame
           path: |
             ./dist/ProgGame
-            ./manuals/User_Manual-Programming_Game.pdf
-            ./README.md
-            ./LICENSE
           if-no-files-found: error
