@@ -28,11 +28,11 @@ jobs:
 
       - name: install dependencies
         run: |
-          cd react-src && npm install && cd ..
+          cd proggame-react && npm install && cd ..
 
       - name: build react
         run: |
-          cd react-src && npm run build && cd ..
+          cd proggame-react && npm run build && cd ..
 
       - name: build neutralino
         run: |
