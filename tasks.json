@@ -1,22 +1,22 @@
 [{
     "id": 0,
     "name": "task 0",
-    "code": "demo code 0"
+    "code": "def task_one():\n    return True\n\nprint(task_one())"
 },{
     "id": 1,
     "name": "task 1",
-    "code": "demo code 1"
+    "code": "def task_two():\n    return True\n\nprint(task_two())"
 },{
     "id": 2,
     "name": "task 2",
-    "code": "demo code 2"
+    "code": "def task_three():\n    return True\n\nprint(task_three())"
 },{
     "id": 3,
     "name": "task 3",
-    "code": "demo code 3"
+    "code": "def task_four():\n   return True\n\nprint(task_four())"
 
 },{
     "id": 4,
     "name": "task 4",
-    "code": "demo code 4"
+    "code": "def task_five():\n   return True\n\nprint(task_five())"
 }]

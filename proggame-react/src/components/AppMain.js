@@ -10,9 +10,12 @@ export default function AppMain({ready, state, out, initVal, tasks, setCode, the
     useEffect(() => {
         if (editorRef.editor) {
             editorRef.editor.focus();
-            console.log(editorRef)
         }
-        setCode("")
+        if (ready && state >= 0 && state < 5) {
+            setCode(tasks[state].code.trim());
+            return;
+        }
+        setCode("");
     }, [initVal]); // eslint-disable-line
 
     const getCode = (value) => {
@@ -29,7 +32,7 @@ export default function AppMain({ready, state, out, initVal, tasks, setCode, the
                 <Editor height="77vh"
                         width="100%"
                         defaultLanguage="python" 
-                        defaultValue={ready && state >= 0 && state < 5 ? tasks[state].code : ""}
+                        defaultValue={ready && state >= 0 && state < 5 ? tasks[state].code.trim() : ""}
                         onChange={getCode}
                         loading={<Loader/>}
                         theme={theme === 'dark' ? 'vs-dark' : 'vs'}
