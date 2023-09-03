@@ -15,7 +15,8 @@
     "app.*",
     "filesystem.writeFile",
     "filesystem.readFile",
-    "os.execCommand"
+    "os.execCommand",
+    "storage.*"
   ],
   "globalVariables": {
     "PY_CMD": "python3"
