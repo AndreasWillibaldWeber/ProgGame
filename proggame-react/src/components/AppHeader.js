@@ -4,6 +4,8 @@ import SchemaToggle from './SchemaToggle';
 
 export default function AppHeader({state, setState, ready, name, setName}) {
 
+    const nameIsValid = /[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/.test(name);
+
     const startState = () => {
         if (state === 5) {
             resetState();
@@ -32,8 +34,9 @@ export default function AppHeader({state, setState, ready, name, setName}) {
                     <Group position='right'>
                         <TextInput disabled={!ready || state >= 0}
                                 value={name} onChange={(event) => setName(event.currentTarget.value)}
-                                placeholder='Insert Name'></TextInput>
-                        <Button disabled={state >= 0 || !name} 
+                                placeholder='Insert Name'
+                                error={nameIsValid}/>
+                        <Button disabled={state >= 0 || !name || nameIsValid} 
                                 color="green"
                                 onClick={startState}><Run/></Button>
                         <Button disabled={state < 0}
