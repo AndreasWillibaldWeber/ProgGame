@@ -1,4 +1,4 @@
-import { useMantineColorScheme, SegmentedControl, Group, Center, Box } from '@mantine/core';
+import { useMantineColorScheme, SegmentedControl, Group, Center } from '@mantine/core';
 import { IconSun, IconMoon } from '@tabler/icons-react';
 
 export default function SchemaToggle() {

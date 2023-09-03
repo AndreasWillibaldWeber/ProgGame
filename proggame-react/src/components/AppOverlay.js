@@ -22,7 +22,7 @@ export default function AppOverlay({state, setState, setOut, tasks, setTasks, in
         <Overlay blur={15} center>
             <Stack>
                 
-                    {state == -1 ?  <Card>
+                    {state === -1 ?  <Card>
                                         <Title color="gray.6">Challenge Rules</Title>
                                         <Space h="xl"/>
                                         <List spacing="xs"
