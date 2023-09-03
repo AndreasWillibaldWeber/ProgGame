@@ -20,6 +20,7 @@ A small game that allows to set and practice programming tasks.
 * **Usage:**
   * python (3.x)
   * Linux user still needs to grant execution rights by using the command ```chmod +x filename``` before launching the application.
+  * Minimal screen resolution: ```1280 x 1024px```.
 * **Development:**
   * python (3.x)
   * node.js (v18.16.1)
@@ -73,8 +74,9 @@ neu build --release
   * [X] Button to reset a game works.
   * [X] Input field for player name works.
   * [X] Load tasks into the editor and check for correctness after execution.
-  * [X] Tasks, tests and template code can be defined by files.
-  * [ ] The 5 programming tasks are randomly selected.
+  * [X] Tasks, tests and template code can be defined by a single file.
+  * [X] The 5 programming tasks are randomly selected.
+  * [X] More than 5 programming tasks can be defined by a file.
 * [ ] A List of player names that have completely solved a round can be displayed
 
 ## Roadmap to v1.1.0
