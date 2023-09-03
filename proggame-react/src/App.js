@@ -50,10 +50,12 @@ function App() {
                                     ready={ready}
                                     state={state}
                                     setState={setState}/>}
-                  footer={<AppFooter state={state}
+                  footer={<AppFooter ready={ready}
+                                    state={state}
                                     setState={setState}
                                     code={code}
                                     setCode={setCode}
+                                    tasks={tasks}
                                     initVal={initVal}
                                     setInitVal={setInitVal} 
                                     setOut={setOut} 

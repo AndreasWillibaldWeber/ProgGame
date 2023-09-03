@@ -6,16 +6,13 @@ import ProgressStepper from './ProgressStepper';
 export default function AppMain({ready, state, out, initVal, tasks, setCode, theme}) {
 
     const editorRef = useRef(null);
+    const task = ready && state >= 0 && state < 5 ? tasks[state].desc.trim() + "\n\n" + tasks[state].code.trim() : "";
 
     useEffect(() => {
         if (editorRef.editor) {
             editorRef.editor.focus();
         }
-        if (ready && state >= 0 && state < 5) {
-            setCode(tasks[state].desc.trim() + "\n\n" + tasks[state].code.trim() + "\n\n" + tasks[state].test.trim());
-            return;
-        }
-        setCode("");
+        setCode(task);
     }, [initVal]); // eslint-disable-line
 
     const getCode = (value) => {
@@ -32,7 +29,7 @@ export default function AppMain({ready, state, out, initVal, tasks, setCode, the
                 <Editor height="77vh"
                         width="100%"
                         defaultLanguage="python" 
-                        defaultValue={ready && state >= 0 && state < 5 ? tasks[state].desc.trim() + "\n\n" + tasks[state].code.trim() + "\n\n" + tasks[state].test.trim() : ""}
+                        defaultValue={task}
                         onChange={getCode}
                         loading={<Loader/>}
                         theme={theme === 'dark' ? 'vs-dark' : 'vs'}

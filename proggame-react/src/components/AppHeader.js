@@ -17,8 +17,7 @@ export default function AppHeader({state, setState, ready, name, setName}) {
     }
 
     const resetState = () => {
-        setState(-2);
-        setName('');
+        setState(-3);
     }
 
     return (<Header height={70} p="xs">
