@@ -10,6 +10,7 @@ import AppFooter from './components/AppFooter';
 import AppOverlay from './components/AppOverlay';
 
 import { loadTasks } from './utils/LoadTasks';
+import { validateTasks } from './utils/ValidateTasks';
 import { pyExecutor } from './utils/PyExecutor';
 
 function App() {
@@ -31,8 +32,18 @@ function App() {
 
     if (tasks.length === 0) {
         loadTasks().then(t => {
+            if (!Array.isArray(t) || t.length < 5) {
+                alert("There are not enough tasks defined!");
+                return;
+            }
+            if (!validateTasks(t)) {
+                alert("File defining the tasks is not valid!");
+                return;
+            }
             setTasks(t);
             setReady(true);
+        }).catch( () => {
+            alert("No file called tasks.json found!");
         });
     }
 
