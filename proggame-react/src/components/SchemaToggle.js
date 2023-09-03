@@ -16,7 +16,6 @@ export default function SchemaToggle() {
                         label: (
                             <Center>
                             <IconSun size="1rem" stroke={1.5} />
-                            <Box ml={10}>Light</Box>
                             </Center>
                         ),
                     },
@@ -25,7 +24,6 @@ export default function SchemaToggle() {
                         label: (
                             <Center>
                             <IconMoon size="1rem" stroke={1.5} />
-                            <Box ml={10}>Dark</Box>
                             </Center>
                         ),
                     },
