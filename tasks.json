@@ -1,32 +1,32 @@
 [{
     "id": 0,
     "name": "task 0",
-    "desc": "\"\"\"\nTask: Create a function that adds two numbers!\n\"\"\"",
+    "desc": "\"\"\"\nTask: Create a function called add with two parameters\nthat adds two numbers and returns the result!\n\"\"\"",
     "code": "def add(a,b):\n    pass",
     "test": "print((11 == add(5,6)) and (7 == add(4,3)))"
 },{
     "id": 1,
     "name": "task 1",
-    "desc": "\"\"\"\nTask: Create a function that subtracts two numbers!\n\"\"\"",
+    "desc": "\"\"\"\nTask: Create a function called sub with two parameters\nthat subtracts two numbers and returns the result!\n\"\"\"",
     "code": "def sub(a,b):\n    pass",
     "test": "print((11 == sub(22,11)) and (7 == sub(11,4)))"
 },{
     "id": 2,
     "name": "task 2",
-    "desc": "\"\"\"\nTask: Create a function that multiplies two numbers!\n\"\"\"",
+    "desc": "\"\"\"\nTask: Create a function called mul with two parameters\nthat multiplies two numbers and returns the result!\n\"\"\"",
     "code": "def mul(a,b):\n    pass",
     "test": "print((9 == mul(3,3)) and (21 == mul(7,3)))"
 },{
     "id": 3,
     "name": "task 3",
-    "desc": "\"\"\"\nTask: Create a function that divides two numbers!\n\"\"\"",
+    "desc": "\"\"\"\nTask: Create a function called div with two parameters\nthat divides two numbers and returns the result!\n\"\"\"",
     "code": "def div(a,b):\n    pass",
     "test": "print((11 == div(22,2)) and (7 == div(21,3)))"
 
 },{
     "id": 4,
     "name": "task 4",
-    "desc": "\"\"\"\nTask: Create a function that calculates the integer remainder of a division!\n\"\"\"",
+    "desc": "\"\"\"\nTask: Create a function called mod with two parameters\nthat calculates the integer remainder of a division and returns the result!!\n\"\"\"",
     "code": "def mod(a,b):\n    pass",
     "test": "print((1 == mod(3,2)) and (2 == mod(5,3)))"
 }]
