@@ -1,6 +1,6 @@
 import { storage } from "@neutralinojs/lib"
 
-export async function storeName(name) {
+export async function saveName(name) {
     const timeStamp = (new Date()).toLocaleString("en-US", {timeZone: "Europe/Berlin"});
     let names = []
     try {
@@ -12,7 +12,7 @@ export async function storeName(name) {
     await storage.setData(lnr + "-" + name, timeStamp);
 }
 
-export async function restoreNames() {
+export async function loadNames() {
     return await storage.getKeys();
 }
 
