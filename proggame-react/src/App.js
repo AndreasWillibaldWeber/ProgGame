@@ -20,7 +20,7 @@ function App() {
     const [initVal, setInitVal] = useState(0);
     const [code, setCode] = useState('');
     const [out, setOut] = useState('');
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState(undefined);
     const [ready, setReady] = useState(false);
 
     const preferredColorScheme = useColorScheme();
@@ -30,14 +30,16 @@ function App() {
         setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
     }
 
-    if (tasks.length === 0) {
+    if (tasks === undefined) {
         loadTasks().then(t => {
             if (!Array.isArray(t) || t.length < 5) {
                 alert("There are not enough tasks defined!");
+                setTasks([]);
                 return;
             }
             if (!validateTasks(t)) {
                 alert("File defining the tasks is not valid!");
+                setTasks([]);
                 return;
             }
             setTasks(t);
