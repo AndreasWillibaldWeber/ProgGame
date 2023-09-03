@@ -77,7 +77,7 @@ neu build --release
   * [X] Tasks, tests and template code can be defined by a single file.
   * [X] The 5 programming tasks are randomly selected.
   * [X] More than 5 programming tasks can be defined by a file.
-* [ ] A List of player names that have completely solved a round can be displayed
+* [X] A List of player names that have completely solved a round can be displayed
 
 ## Roadmap to v1.1.0
 * [ ] Show tasks in a separate dialogue, not as a comment in the editor (possibly use the output panel).
