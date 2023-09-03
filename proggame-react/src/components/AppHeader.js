@@ -4,7 +4,7 @@ import SchemaToggle from './SchemaToggle';
 
 export default function AppHeader({state, setState, ready, name, setName}) {
 
-    const nameIsValid = /[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/.test(name);
+    const nameIsValid = /[`!@#$%^&*()_\-+=[\]{};':"\\|,.<>/?~ ]/.test(name);
 
     const startState = () => {
         if (state === 5) {
