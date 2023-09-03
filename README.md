@@ -66,15 +66,27 @@ neu build --release
 * [X] Connect UI with Python interpreter.
   * [X] Program execution button works.
   * [X] Editor and output clear button works.
-* [ ] Implement Game Logic.
-  * [X] The player is given 5 randomly selected programming tasks one after the other, which must be solved in a single attempt.
-  * [ ] Create 5 tasks as examples
+* [X] Implement Game Logic.
+  * [X] The player is given 5 programming tasks one after the other, which must be solved in a single attempt.
+  * [X] Create 5 tasks as examples
   * [X] Button to start a game round works.
   * [X] Button to reset a game works.
   * [X] Input field for player name works.
-  * [ ] Load tasks into the editor and check for correctness after execution.
-  * [ ] Tasks, tests and template code can be defined by files.
+  * [X] Load tasks into the editor and check for correctness after execution.
+  * [X] Tasks, tests and template code can be defined by files.
+  * [ ] The 5 programming tasks are randomly selected.
 * [ ] A List of player names that have completely solved a round can be displayed
+
+## Roadmap to v1.1.0
+* [ ] Show tasks in a separate dialogue, not as a comment in the editor (possibly use the output panel).
+* [ ] Implement more executors for programming languages.
+  * [ ] Implement executors for different programming languages.
+  * [ ] Implement UI elements for selecting a programming language.
+  * [ ] Tasks can be defined in one file for different languages.
+* [ ] Define and render tasks using Markdown syntax.
+  * [ ] Enable Markdown syntax
+  * [ ] Enable LaTeX mathematical expressions
+  * [ ] Enable PlanUML or Mermaid for diagrams
 
 ## License
 
