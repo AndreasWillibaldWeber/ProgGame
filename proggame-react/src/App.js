@@ -83,6 +83,8 @@ function App() {
                 <AppOverlay state={state}
                             setState={setState}
                             setOut={setOut}
+                            tasks={tasks}
+                            setTasks={setTasks}
                             initVal={initVal}
                             setInitVal={setInitVal}
                             name={name}

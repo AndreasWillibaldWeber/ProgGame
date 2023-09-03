@@ -1,15 +1,21 @@
 import { Button, Overlay, List, ThemeIcon, Stack, Card, Text, Title, Space } from '@mantine/core';
 import { AlertCircle } from 'tabler-icons-react';
 
-export default function AppOverlay({state, setState, setOut, initVal, setInitVal, name, setName}) {
+import { fisherYatesShuffle } from '../utils/FisherYatesShuffle';
+
+export default function AppOverlay({state, setState, setOut, tasks, setTasks, initVal, setInitVal, name, setName}) {
 
     const challange = `Challenge! ${name} wants to solve five random tasks in a row!`;
     const congratulations = `Congratulations! ${name} has solved five random tasks in a row!`;
     const failured = `Unfortunately failed! Try it again ${name}!`;
 
+    const shuffle = () => {
+        setTasks(fisherYatesShuffle(tasks));
+    }
+
     const clear = () => {
         setOut("");
-        setInitVal(initVal + 1)
+        setInitVal(initVal + 1);
     };
 
     return (state === -3 || state === -1 || state === 5) ? (
@@ -36,7 +42,7 @@ export default function AppOverlay({state, setState, setOut, initVal, setInitVal
                                     </Card>: <></>}
                 <Button size="xl" color={state === 5 ? 'green.5' : state === -1 ? 'orange.5' : 'red.5'}
                         radius="xl" 
-                        onClick={() => state === -3 || state === 5 ? (setState(-2), setName(""), clear()) : (setState(0), clear())}
+                        onClick={() => state === -3 || state === 5 ? (setState(-2), setName(""), clear()) : (shuffle(), setState(0), clear())}
                 >
                     {state === 5 ? congratulations : state === -3 ? failured : challange}
                 </Button>
