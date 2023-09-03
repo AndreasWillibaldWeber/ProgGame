@@ -5,4 +5,4 @@ export async function pyExecutor(code) {
     let command = "python3 code.py";
     let commandOut = await os.execCommand(command);
     return commandOut.stdOut || commandOut.stdErr;
- }
+}
