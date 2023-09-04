@@ -7,6 +7,7 @@ A small game that allows to set and practice programming tasks.
 
 ## Manuals
 * [User Manual](manuals/User_Manual-Programming_Game.pdf)
+* [Admin Manual](manuals/Admin_Manual-Programming_Game.pdf)
 
 ## Build Tools:
 * neutralino.js
