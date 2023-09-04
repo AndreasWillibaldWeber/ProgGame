@@ -46,6 +46,7 @@ function App() {
             setReady(true);
         }).catch( () => {
             alert("No file called tasks.json found!");
+            setTasks([]);
         });
     }
 
