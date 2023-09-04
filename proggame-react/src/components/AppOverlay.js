@@ -7,7 +7,7 @@ import { saveName, loadNames } from '../utils/NameStorage';
 
 export default function AppOverlay({state, setState, setOut, tasks, setTasks, initVal, setInitVal, name, setName}) {
 
-    const [names, setNames] = useState(undefined);
+    const [names, setNames] = useState([]);
 
     const challange = `Challenge! ${name} wants to solve five random tasks in a row!`;
     const congratulations = `Congratulations! ${name} has solved five random tasks in a row!`;
@@ -28,10 +28,10 @@ export default function AppOverlay({state, setState, setOut, tasks, setTasks, in
         });  
     }
 
-    if (names === undefined && state === -1) {
+    if (state === -1) {
         loadNames().then( n => {
             setNames(n);
-        }).catch( () => setNames([]));
+        }).catch( (e) => console.log(e));
     }
 
     return (state === -3 || state === -1 || state === 5) ? (
