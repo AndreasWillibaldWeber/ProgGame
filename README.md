@@ -62,7 +62,7 @@ cd ..
 neu build --release
 ```
 
-## Roadmap to v1.0.0
+## Roadmap to v1.0.0-alpha
 * [X] Create a GitHub actions workflow for automatic builds.
 * [X] Create UI for programming and for program output.
 * [X] Connect UI with Python interpreter.
@@ -80,7 +80,17 @@ neu build --release
   * [X] More than 5 programming tasks can be defined by a file.
 * [X] A List of player names that have completely solved a round can be displayed
 
-## Roadmap to v1.1.0
+## Roadmap to v1.0.0-stable
+* [ ] Extensive testing and bug fixing of version 1.0.0-alpha
+
+## Roadmap to v1.0.1-alpha
+* [ ] Replace Alert() with proper dialogues in React.
+* [ ] Implement tests.
+
+## Roadmap to v1.0.1-stable
+* [ ] Extensive testing and bug fixing of version 1.0.1-alpha
+
+## Roadmap to v1.1.0-alpha
 * [ ] Show tasks in a separate dialogue, not as a comment in the editor (possibly use the output panel).
 * [ ] Implement more executors for programming languages.
   * [ ] Implement executors for different programming languages.
@@ -90,6 +100,9 @@ neu build --release
   * [ ] Enable Markdown syntax
   * [ ] Enable LaTeX mathematical expressions
   * [ ] Enable PlanUML or Mermaid for diagrams
+
+## Roadmap to v1.1.0-stable
+* [ ] Extensive testing and bug fixing of version 1.1.0-alpha
 
 ## License
 
