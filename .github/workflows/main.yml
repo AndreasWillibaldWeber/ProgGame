@@ -1,8 +1,7 @@
 name: build
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
 jobs:
   build:
     name: build specification 
@@ -24,23 +23,33 @@ jobs:
 
       - name: set up neutralino
         run: |
-          sudo npm install -g @neutralinojs/neu && neu create app && mv app/bin bin && rm -rf app
+          sudo npm install -g @neutralinojs/neu
+          neu create app
+          mv app/bin bin 
+          rm -rf app
 
       - name: install dependencies
         run: |
-          cd proggame-react && npm install && cd ..
+          cd proggame-react
+          npm install
+          cd ..
 
       - name: build react
         run: |
-          cd proggame-react && npm run build && cd ..
+          cd proggame-react
+          npm run build
+          cd ..
 
       - name: build neutralino
         run: |
-          ls && neu build --release && ls dist/ProgGame
+          ls
+          neu build --release
+          ls dist/ProgGame
 
       - name: finalize release
         run: |
           mv manuals/User_Manual-Programming_Game.pdf dist/ProgGame/User_Manual-Programming_Game.pdf
+          mv manuals/Admin_Manual-Programming_Game.pdf dist/ProgGame/Admin_Manual-Programming_Game.pdf
           mv README.md dist/ProgGame/README.md
           mv LICENSE dist/ProgGame/LICENSE
           mv tasks.json dist/ProgGame/tasks.json
